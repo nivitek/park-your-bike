@@ -1,13 +1,13 @@
-import express from "express";
-import mongoose from "mongoose";
-import dotenv from "dotenv";
-import cors from "cors";
-import userRoutes from "./routes/userRoutes.js";
-import User from "./models/User.js";
-import bcrypt from "bcryptjs";
-import jwt from "jsonwebtoken";
-import bookingRoutes from "./routes/bookingRoutes.js";
-import Booking from "./models/Booking.js";
+const express = require("express");
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+const cors = require("cors");
+const userRoutes = require("./routes/userRoutes.js");
+const User = require("./models/User.js");
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const bookingRoutes = require("./routes/bookingRoutes.js");
+const Booking = require("./models/Booking.js");
 
 dotenv.config();
 const app = express();
@@ -16,10 +16,7 @@ app.use(express.json());
 app.use(cors());
 
 mongoose
-  .connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(process.env.MONGO_ConnString)
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.log(err));
 app.use("/api/bookings", bookingRoutes);
@@ -121,12 +118,10 @@ app.post("/api/bookings", async (req, res) => {
     });
 
     if (existingBooking) {
-      return res
-        .status(400)
-        .json({
-          message:
-            "You have already booked a slot for one of the selected dates.",
-        });
+      return res.status(400).json({
+        message:
+          "You have already booked a slot for one of the selected dates.",
+      });
     }
 
     // Create new booking

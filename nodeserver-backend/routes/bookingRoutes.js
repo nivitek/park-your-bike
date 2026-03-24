@@ -1,5 +1,5 @@
-import express from "express";
-import Booking from "../models/Booking.js";
+const express = require("express");
+const Booking = require("../models/Booking.js");
 
 const router = express.Router();
 
@@ -33,4 +33,4 @@ router.get("/", async (req, res) => {
 //   }
 // });
 
-export default router;
+module.exports = router;
