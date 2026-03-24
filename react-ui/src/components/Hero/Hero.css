@@ -1,0 +1,15 @@
+.text-white {
+  color: #dbefe6;
+}
+.clip-path {
+  clip-path: polygon(37.25% 37.25%, 57.25% 95%, 75% 75%, 25% 75%);
+  background-color: #f77650;
+}
+.container-box {
+  display: flex;
+}
+.pt-12 {
+  flex-grow: 1;
+  margin: 20px;
+  padding: 10px;
+}

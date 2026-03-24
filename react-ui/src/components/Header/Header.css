@@ -1,0 +1,11 @@
+.shadow-pink-500\/20 {
+  background: rgb(36, 13, 0);
+  background: linear-gradient(
+    90deg,
+    var(--c1, rgba(36, 13, 0, 1) 0%),
+    var(--c2, rgba(214, 55, 15, 1) 0%),
+    var(--c3, rgba(210, 109, 14, 1) 46%),
+    var(--c4, rgb(194, 176, 96) 100%),
+    var(--c5, rgba(0, 212, 255, 1) 100%)
+  );
+}

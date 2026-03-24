@@ -1,0 +1,16 @@
+.link {
+  font-style: oblique;
+  color: black;
+}
+.imgcenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 50%; */
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+}
