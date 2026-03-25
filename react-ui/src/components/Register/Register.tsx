@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import RegisteredUser from "../PopUps/RegisteredUserPopup";
 
 export default function Register() {
@@ -29,7 +29,7 @@ export default function Register() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
-      }
+      },
     );
 
     const data = await response.json();

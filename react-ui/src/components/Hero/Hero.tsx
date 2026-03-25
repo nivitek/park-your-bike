@@ -9,7 +9,7 @@ export default function Hero() {
     if (token) {
       setIsLoggedIn(true);
     }
-  });
+  }, []);
   const handleUserLogin = () => {
     if (isLoggedIn) {
       navigate("/Main");
@@ -43,12 +43,12 @@ export default function Hero() {
             Book a slot dedicatedly for your bike and let be in peace.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <a
+            <button
               onClick={handleUserLogin}
               className="rounded-md bg-blue-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 cursor-pointer"
             >
               Start Booking
-            </a>
+            </button>
             <a href="/Detail" className="text-sm/6 font-semibold text-gray-900">
               Learn more <span aria-hidden="true">→</span>
             </a>
